@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: 211223789150.dkr.ecr.us-east-2.amazonaws.com/my-springboot-app:latest
+        image: rchethan602/privaterepo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
@@ -37,6 +37,6 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 8085
-  type: LoadBalancer
+  type: ClusterIp
   selector:
     app: springboot-app
