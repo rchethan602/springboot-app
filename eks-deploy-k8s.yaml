@@ -14,8 +14,7 @@ spec:
       labels:
         app: springboot-app
     spec:
-      imagePullSecrets:
-        - cicdsecret
+      serviceAccountName: cicdsa
       containers:
       - name: my-springboot-app
         image: rchethan602/privaterepo:latest
