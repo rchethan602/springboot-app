@@ -14,6 +14,8 @@ spec:
       labels:
         app: springboot-app
     spec:
+      imagePullSecrets:
+        - cicdsecret
       containers:
       - name: my-springboot-app
         image: rchethan602/privaterepo:latest
@@ -37,6 +39,6 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 8085
-  type: ClusterIp
+  type: ClusterIP
   selector:
     app: springboot-app
